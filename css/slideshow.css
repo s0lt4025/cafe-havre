@@ -1,0 +1,9 @@
+/*アニメーションの処理*/
+/*li要素の最後の子にトランジションを設定*/
+.hero li:last-child{
+    transition-duration:5s;}
+
+/*アニメーションしているクラスを対象にアニメーションの仕方を設定*/
+.hero li:last-child.active{
+    transition-delay:1s;
+    opacity:0;}

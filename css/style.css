@@ -1,0 +1,460 @@
+html{
+    scroll-behavior:smooth;
+    scroll-padding-top:80px;
+}
+
+header{
+    position:sticky;
+    top:0;
+    z-index:100;
+    background:#999;
+    height:80px;
+    ul{
+        display:flex;
+        gap:1.2em;
+        width:fit-content;
+        margin-left:auto;
+        margin-right:auto;
+        padding-top:1.75em;
+        li{
+            a{
+                text-transform:uppercase;
+                color:white;
+                text-decoration:none;
+            }
+        }
+    }
+}
+
+.space h1,
+.space .container,
+.access{
+    max-width:1000px;
+    margin:0 auto;
+}
+
+.philosophy,
+.space{
+    background:#ddd;
+}
+
+.hero{
+    ol{
+        position:relative;
+        height:50vh;
+        li{
+            position:absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            overflow:hidden;
+            img{
+                width:100%;
+                height:100%;
+                object-fit:cover;
+            }
+        }
+    }
+}
+
+.story{}
+.story h1{}
+.story .container {}
+.story .intro{
+    display: flex;/*個々の指示で横組み*/
+    gap:40px;
+}
+.story .text{
+    width:60%;/*ここはスマホだと広がる*/
+}
+
+}
+.story .text h2{}
+.story .text p{}
+.story .image{
+/*サイズ決める側（マスク）*/
+    width:40%;/*スマホだと広がる*/
+}
+/*スマホ用のブレイクポイント設定*/
+@media (max-width:500px){
+    .story .intro{
+        display:block;
+    }
+    .story .text{
+        width:100%;
+    }
+    .story .image{
+        width:100%;
+    }
+}
+
+.story .image img{
+    /*実際のイメージは相対的にサイズが決まる*/
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+.story .message{
+    width:35em;
+}
+.story .message p{}
+
+/* ===================================
+philosophy
+=================================== */
+
+.philosophy{
+    background:#000;
+    color:#fff;
+    padding:120px 0;
+}
+
+.philosophy .container{
+    width:92%;
+    max-width:1200px;
+    margin:0 auto;
+}
+
+.philosophy .message{
+    text-align:center;
+    margin-bottom:100px;
+}
+
+.philosophy .message h2{
+    font-size:48px;
+    line-height:1.5;
+    font-weight:700;
+    margin-bottom:40px;
+}
+
+.philosophy .author{
+    font-size:18px;
+}
+
+.philosophy .conceptList{
+    display:flex;
+}
+
+.philosophy .conceptItem{
+    width:33.333%;
+    padding:40px;
+    background:#efefef;
+    color:#333;
+    border-right:1px solid #ccc;
+}
+
+.philosophy .conceptItem:last-child{
+    border-right:none;
+}
+
+.philosophy .number{
+    display:inline-block;
+    background:#999;
+    color:#fff;
+    padding:8px 12px;
+    margin-bottom:30px;
+}
+
+.philosophy .conceptItem h3{
+    font-size:24px;
+    margin-bottom:30px;
+}
+
+.philosophy .conceptItem p{
+    line-height:2;
+}
+
+@media (max-width:500px){
+
+    .philosophy .message{
+        margin-bottom:50px;
+    }
+
+    .philosophy .message h2{
+        font-size:32px;
+        line-height:1.5;
+    }
+
+    .philosophy .author{
+        font-size:16px;
+    }
+
+    .philosophy .conceptList{
+        display:block;
+    }
+
+    .philosophy .conceptItem{
+        width:100%;
+        padding:30px;
+        border-right:none;
+        border-bottom:1px solid #ccc;
+    }
+
+    .philosophy .conceptItem:last-child{
+        border-bottom:none;
+    }
+
+    .philosophy .number{
+        margin-bottom:20px;
+    }
+
+    .philosophy .conceptItem h3{
+        font-size:20px;
+        margin-bottom:20px;
+    }
+
+    .philosophy .conceptItem p{
+        font-size:16px;
+        line-height:1.8;
+    }
+
+}
+
+/* ===================================
+menu
+=================================== */
+
+.menu{
+    background:#000;
+    color:#fff;
+    padding:120px 0;
+}
+
+.menu .container{
+    width:92%;
+    max-width:1200px;
+    margin:0 auto;
+}
+
+.menu .intro{
+    display:flex;
+    justify-content:space-between;
+    gap:40px;
+    margin-bottom:80px;
+}
+
+.menu .text{
+    width:50%;
+}
+
+.menu .text h2{
+    font-size:56px;
+    font-weight:700;
+    margin-bottom:40px;
+}
+
+.menu .text p{
+    line-height:2;
+    margin-bottom:40px;
+}
+
+.menu .intro .image{
+    width:50%;
+}
+
+.menu .intro .image img{
+    width:100%;
+    display:block;
+}
+
+.menu .priceList{
+    border-top:1px solid #555;
+    padding-top:30px;
+}
+
+.menu .priceList div{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:20px;
+}
+
+.menu .menuCards{
+    display:flex;
+}
+
+.menu .card .image{
+    height:400px;
+}
+
+.menu .card .image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+.menu .card .body{
+    padding:40px;
+}
+
+.menu .category{
+    display:inline-block;
+    background:#999;
+    color:#fff;
+    padding:6px 12px;
+    margin-bottom:20px;
+}
+
+.menu .card h3{
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+.menu .card p{
+    line-height:1.8;
+}
+
+.menu .price{
+    font-size:40px;
+    font-weight:bold;
+    margin-top:30px;
+}
+
+@media (max-width:500px){
+
+    .menu .intro{
+        display:block;
+    }
+
+    .menu .text{
+        width:100%;
+        margin-bottom:30px;
+    }
+
+    .menu .intro .image{
+        width:100%;
+    }
+
+    .menu .intro .image img{
+        width:100%;
+        height:250px;
+        object-fit:cover;
+    }
+
+    .menu .menuCards{
+        display:block;
+    }
+
+    .menu .card{
+        width:100%;
+    }
+
+    .menu .card:first-child{
+        margin-bottom:20px;
+    }
+
+    .menu .card .image{
+        height:250px;
+    }
+
+    .menu .card .image img{
+        width:100%;
+        height:100%;
+        object-fit:cover;
+    }
+    .menu .card .image{
+    height:250px;
+
+    .menu .card .image img{
+        width:100%;
+        height:100%;
+        object-fit:cover;
+    }
+}
+
+.space .container ul li.disable{
+    opacity:0.3;
+    pointer-events:none;
+    cursor:default;
+}
+.space .container{
+    max-width:1000px;
+    margin:0 auto;
+    position:relative;
+    ul{
+        position:absolute;
+        right:0;
+        top:0;
+        display:flex;
+        gap:1em;
+    }
+        .carousel{
+            overflow:scroll;
+            padding-top:2em;
+            scrollbar-width:none;
+            -ms-overflow-style:none;
+            &::-webkit-scrollbar{
+                display:none;
+            }
+            ol{
+                display:flex;
+                gap:5px;
+                li{
+                    flex-shrink:0;
+                    width:200px;
+                    height:100px;
+                    overflow:hidden;
+                    img{
+                        width:100%;
+                        height:100%;
+                        object-fit:cover;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.access{
+    .container{
+        display:flex;
+        gap:40px;
+    }
+    .image{
+        width:460px;
+        height:325px;
+        overflow:hidden;
+        img{
+            width:100%;
+            height:100%;
+            object-fit:cover;
+        }
+    }
+    .info{
+        dl{
+            margin-bottom:1.5em;
+            dt{
+                font-size:13px;
+                border-bottom-width:1px;
+                border-bottom-color:#ddd;
+                border-bottom-style:solid;
+                padding-bottom:0.25em;
+                margin-bottom:0.75em;
+            }
+            dd{
+                font-size:16px;
+                line-height:1.5em;
+            }
+        }
+    }
+}
+
+footer{
+    background:#999;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    height:120px;
+    padding-left:40px;
+    padding-right:40px;
+    align-items:center;
+    .links{
+        display:flex;
+        gap:1.2em;
+    }
+    a{
+        color:white;
+        text-decoration:none;
+    }
+}
